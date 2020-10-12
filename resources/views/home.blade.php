@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     Welcome!
-                    Try to commit
+                    Try to commit!
                 </div>
             </div>
         </div>
