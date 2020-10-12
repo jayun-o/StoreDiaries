@@ -9,6 +9,7 @@
 
                 <div class="panel-body">
                     Welcome!
+                    Try to commit
                 </div>
             </div>
         </div>
