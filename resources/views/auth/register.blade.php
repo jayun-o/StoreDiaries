@@ -11,9 +11,9 @@
                     <form class="form-horizontal" role="form" method="post" action="{{ route('register') }}">
                         @csrf
 
-                        <!-- name -->
+                        <!-- store name -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Name</label>
+                            <label class="col-md-4 control-label">Store Name</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="name" value="{{ old('name') }}">
