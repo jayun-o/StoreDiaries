@@ -49,6 +49,7 @@
                     <li><a href="{{ url('/') }}" class="p-3">Home</a></li>
                     @auth
                     <li><a href="{{ route('dashboard') }}" class="p-3">Dashboard</a></li>
+                    
                     @endauth
                 </ul>
 
