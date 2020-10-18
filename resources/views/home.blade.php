@@ -8,7 +8,7 @@
                 <div class="panel-heading">Home</div>
 
                 <div class="panel-body">
-                    Welcome!
+                    Welcome!<br>
                     Try to commit!
                 </div>
             </div>
