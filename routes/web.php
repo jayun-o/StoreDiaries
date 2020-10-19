@@ -36,3 +36,7 @@ Route::post('/login', [LoginController::class,'store']);
 Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 
 Route::get('/income', [IncomeController::class,'index'])->name('income');
+
+Route::get('/expenses', [IncomeController::class,'index'])->name('expenses'); //dont forget to change controller name
+
+Route::get('/salesReport', [IncomeController::class,'index'])->name('salesReport'); //dont forget to change controller name

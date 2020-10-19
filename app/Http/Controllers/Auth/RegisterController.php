@@ -30,7 +30,7 @@ class RegisterController extends Controller
 
         auth()->attempt($request->only('email', 'password'));
         // authenticate
-        return redirect()->route('dashboard');
+        return redirect()->route('/');
 
     }
 }

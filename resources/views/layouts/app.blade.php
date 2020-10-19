@@ -14,10 +14,11 @@
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
-        
+
         body {
             font-family: 'Lato';
-            background-color:#82E0AA;
+            background-color:#E9F7EF;
+            
         }
 
         .fa-btn {
@@ -50,7 +51,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/') }}" class="p-3">Home</a></li>
                     @auth
-                    <li><a href="{{ route('dashboard') }}" class="p-3">Dashboard</a></li>
+                    <!--<li><a href="{{ route('dashboard') }}" class="p-3">Dashboard</a></li>-->
                     <li><a href="{{ route('income') }}" class="p-3">Income</a></li>
                     <li><a href="{{ route('expenses') }}" class="p-3">Expenses</a></li>
                     <li><a href="{{ route('salesReport') }}" class="p-3">Sales report</a></li>
