@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}" class="p-3">Home</a></li>
+                    <li><a href="{{ route('home') }}" class="p-3">Home</a></li>
                     @auth
                     <!--<li><a href="{{ route('dashboard') }}" class="p-3">Dashboard</a></li>-->
                     <li><a href="{{ route('income') }}" class="p-3">Income</a></li>
