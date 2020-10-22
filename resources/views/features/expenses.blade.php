@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Record income</div>
+                <div class="panel-heading">Record Expense</div>
 
                 <div class="panel-body">
                 @if (session('status'))
@@ -15,7 +15,7 @@
 
 
                 @endif
-                    <form class="form-horizontal" role="form" method="post" action="{{ route('income') }}">
+                    <form class="form-horizontal" role="form" method="post" action="{{ route('expenses') }}">
                         @csrf
 
                         <!-- Date -->
@@ -37,29 +37,30 @@
                         </div>
 
 
-                        <!-- วิธีการรับเงิน-->
+                        <!-- วิธีการจ่ายเงิน-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">วิธีการรับเงิน : </label>
+                            <label class="col-md-4 control-label">วิธีการจ่ายเงิน : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="receive" id="receive">
+                                <select type="select" class="form-control" name="payment" id="payment">
                                 <option value="cash">เงินสด</option>
                                 <option value="pay-in">โอนเงินเข้าบัญชี</option>
                                 <option value="cheque">เช็ค</option>
-                                </select>
+                                <option value="credit">เครดิต</option>
+                            </select>
                             </div>
                         </div>
 
                         
-                        <!-- ประเภทรายรับ-->
+                        <!-- ประเภทรายจ่าย-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">ประเภทรายรับ : </label>
+                            <label class="col-md-4 control-label">ประเภทรายจ่าย : </label>
 
                             <div class="col-md-6">
                                 <select type="select" class="form-control" name="IncomeType" id="IncomeType">
-                                <option value="capital">เงินทุน</option>
-                                <option value="loan">จากการกู้ยืม</option>
-                                <option value="cheque">เช็ค</option>
+                                <option value="capital">ซื้อสินค้า</option>
+                                <option value="wages">ค่าจ้างพนักงาน</option>
+                                <option value="tax">ภาษี</option>
                                 <option value="other">รายการอื่นๆ</option>
                             </select>
                             </div>

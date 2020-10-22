@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\SalesReportController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::get('/home', function () {
 
 Route::get('/', [DashboardController::class,'index'])->name('dashboard');
 
+// Route::get('/home', [HomeController::class,'index'])->name('home');
+
 Route::get('/register', [RegisterController::class,'index'])->name('register');
 Route::post('/register', [RegisterController::class,'store']);
 
@@ -37,6 +40,6 @@ Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 
 Route::get('/income', [IncomeController::class,'index'])->name('income');
 
-Route::get('/expenses', [IncomeController::class,'index'])->name('expenses'); //dont forget to change controller name
+Route::get('/expenses', [ExpensesController::class,'index'])->name('expenses'); //dont forget to change controller name
 
 Route::get('/salesReport', [IncomeController::class,'index'])->name('salesReport'); //dont forget to change controller name

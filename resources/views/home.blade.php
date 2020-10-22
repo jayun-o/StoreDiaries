@@ -10,7 +10,7 @@
                 <div class="panel-body">
 
                     <!--button link to income page-->
-                    <form class="form-horizontal" role="form" method="post" action="">
+                    <form class="form-horizontal" role="form" method="get" action="">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-success btn-lg btn-block">บันทึกรายรับ</button>
@@ -19,7 +19,7 @@
                     </form>
 
                     <!--button link to expenses page-->
-                    <form class="form-horizontal" role="form" method="post" action="">
+                    <form class="form-horizontal" role="form" method="get" action="">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-danger btn-lg btn-block">บันทึกรายจ่าย</button>
@@ -28,7 +28,7 @@
                     </form>
 
                     <!--button link to stock page-->
-                    <form class="form-horizontal" role="form" method="post" action="">
+                    <form class="form-horizontal" role="form" method="get" action="">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Stock</button>
@@ -37,7 +37,7 @@
                     </form>
 
                     <!--button link to sales report page-->
-                    <form class="form-horizontal" role="form" method="post" action="">
+                    <form class="form-horizontal" role="form" method="get" action="">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-warning btn-lg btn-block">Sales Report</button>
