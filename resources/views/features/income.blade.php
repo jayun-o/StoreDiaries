@@ -15,7 +15,7 @@
 
 
                 @endif
-                    <form class="form-horizontal" role="form" method="post" action="{{ route('income') }}">
+                    <form class="form-horizontal" role="form" method="post" action="{{ route('recordIncome') }}">
                         @csrf
 
                         <!-- Date -->
@@ -23,7 +23,8 @@
                             <label class="col-md-4 control-label">วัน / เดือน / ปี : </label>
 
                             <div class="col-md-6">
-                                <input type="date" class="form-control" name="date">   
+                                <input type="date" class="form-control" name="date"> 
+                                <!--<input type="text" class="form-control" name="date">   -->
                             </div>
                         </div>
 
@@ -32,7 +33,7 @@
                             <label class="col-md-4 control-label">ชื่อรายการ : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="IncomeName"> 
+                                <input type="text" class="form-control" name="name"> 
                             </div>
                         </div>
 
@@ -42,7 +43,7 @@
                             <label class="col-md-4 control-label">วิธีการรับเงิน : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="receive" id="receive">
+                                <select type="select" class="form-control" name="method" id="method">
                                 <option value="cash">เงินสด</option>
                                 <option value="pay-in">โอนเงินเข้าบัญชี</option>
                                 <option value="cheque">เช็ค</option>
@@ -56,7 +57,7 @@
                             <label class="col-md-4 control-label">ประเภทรายรับ : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="IncomeType" id="IncomeType">
+                                <select type="select" class="form-control" name="type" id="type">
                                 <option value="capital">เงินทุน</option>
                                 <option value="loan">จากการกู้ยืม</option>
                                 <option value="cheque">เช็ค</option>
@@ -66,48 +67,48 @@
                         </div>
 
                         <!-- รายละเอียดเพิ่มเติม -->
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="col-md-4 control-label">รายละเอียดเพิ่มเติม : </label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="otherDetail"> 
-                            </div>
-                        </div>
+                            </div>-->
+                        <!--</div>-->
 
                         <!-- จำนวนเงิน -->
-                        <div class="form-group">
+                        <!--<div class="form-group">-->
                             <label class="col-md-4 control-label">จำนวนเงิน(บาท) : </label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="amount"> 
                             </div>
-                        </div>
+                        <!--</div>-->
 
                         <!-- หมายเหตุ -->
-                        <div class="form-group">
+                        <!--<div class="form-group">-->
                             <label class="col-md-4 control-label">หมายเหตุ : </label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="note"> 
                             </div>
-                        </div>
+                        <!--</div>-->
 
                         <!-- หลักฐาน -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">หลักฐาน : </label>
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-4 control-label">หลักฐาน : </label>
 
                             <div class="col-md-6">
                             <form action="upload.php" method="post" enctype="multipart/form-data">
                                 เลือกรูปภาพ
-                                <input type="file" name="fileToUpload" id="fileToUpload"><br>
+                                <input type="file" name="attachment" id="fileToUpload"><br>
                                 <input type="submit" value="Upload Image" name="submit">
                             </form>
-                            </div>
-                        </div>                        
+                            </div>-->
+                        <!--</div>  -->                      
 
 
                         <!-- Record button -->
-                        <div class="form-group">
+                        <!--<div class="form-group">-->
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Record
