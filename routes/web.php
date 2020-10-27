@@ -42,7 +42,9 @@ Route::get('/income', [IncomeController::class,'index'])->name('income');
 Route::post('/income', [IncomeController::class, 'store'])->name('recordIncome');
 
 Route::get('/expenses', [ExpensesController::class,'index'])->name('expenses'); //dont forget to change controller name
+Route::post('/income', [IncomeController::class, 'store'])->name('recordExpenses');
 
 Route::get('/salesReport', [IncomeController::class,'index'])->name('salesReport'); //dont forget to change controller name
 
 Route::post('/income/record', [IncomeController::class, 'store'])->name('recordIncome');
+Route::post('/expenses/record', [ExpensesController::class, 'store'])->name('recordExpenses');

@@ -15,7 +15,7 @@
 
 
                 @endif
-                    <form class="form-horizontal" role="form" method="post" action="{{ route('expenses') }}">
+                    <form class="form-horizontal" role="form" method="post" action="{{ route('recordExpenses') }}">
                         @csrf
 
                         <!-- Date -->
@@ -32,7 +32,7 @@
                             <label class="col-md-4 control-label">ชื่อรายการ : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="IncomeName"> 
+                                <input type="text" class="form-control" name="name"> 
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                             <label class="col-md-4 control-label">วิธีการจ่ายเงิน : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="payment" id="payment">
+                                <select type="select" class="form-control" name="method" id="method">
                                 <option value="cash">เงินสด</option>
                                 <option value="pay-in">โอนเงินเข้าบัญชี</option>
                                 <option value="cheque">เช็ค</option>
@@ -57,7 +57,7 @@
                             <label class="col-md-4 control-label">ประเภทรายจ่าย : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="IncomeType" id="IncomeType">
+                                <select type="select" class="form-control" name="type" id="type">
                                 <option value="capital">ซื้อสินค้า</option>
                                 <option value="wages">ค่าจ้างพนักงาน</option>
                                 <option value="tax">ภาษี</option>
@@ -67,13 +67,13 @@
                         </div>
 
                         <!-- รายละเอียดเพิ่มเติม -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="col-md-4 control-label">รายละเอียดเพิ่มเติม : </label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="otherDetail"> 
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- จำนวนเงิน -->
                         <div class="form-group">
@@ -94,7 +94,7 @@
                         </div>
 
                         <!-- หลักฐาน -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="col-md-4 control-label">หลักฐาน : </label>
 
                             <div class="col-md-6">
@@ -104,7 +104,7 @@
                                 <input type="submit" value="Upload Image" name="submit">
                             </form>
                             </div>
-                        </div>                        
+                        </div>                         -->
 
 
                         <!-- Record button -->
