@@ -76,22 +76,22 @@
                         <!--</div>-->
 
                         <!-- จำนวนเงิน -->
-                        <!--<div class="form-group">-->
+                        <div class="form-group">
                             <label class="col-md-4 control-label">จำนวนเงิน(บาท) : </label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="amount"> 
                             </div>
-                        <!--</div>-->
+                        </div>
 
                         <!-- หมายเหตุ -->
-                        <!--<div class="form-group">-->
+                        <div class="form-group">
                             <label class="col-md-4 control-label">หมายเหตุ : </label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="note"> 
                             </div>
-                        <!--</div>-->
+                        </div>
 
                         <!-- หลักฐาน -->
                         <!--<div class="form-group">-->
@@ -108,7 +108,7 @@
 
 
                         <!-- Record button -->
-                        <!--<div class="form-group">-->
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Record
