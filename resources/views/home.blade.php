@@ -37,7 +37,7 @@
                     </form>
 
                     <!--button link to sales report page-->
-                    <form class="form-horizontal" role="form" method="get" action="">
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('salesReport') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-warning btn-lg btn-block">Sales Report</button>
