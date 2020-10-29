@@ -60,7 +60,7 @@
                                 <select type="select" class="form-control" name="type" id="type">
                                 <option value="capital">เงินทุน</option>
                                 <option value="loan">จากการกู้ยืม</option>
-                                <option value="cheque">เช็ค</option>
+                                <option value="selling">จากการขายสินค้า</option>
                                 <option value="other">รายการอื่นๆ</option>
                             </select>
                             </div>
