@@ -58,7 +58,7 @@
 
                             <div class="col-md-6">
                                 <select type="select" class="form-control" name="type" id="type">
-                                <option value="capital">ซื้อสินค้า</option>
+                                <option value="stock">ซื้อสินค้า</option>
                                 <option value="wages">ค่าจ้างพนักงาน</option>
                                 <option value="tax">ภาษี</option>
                                 <option value="other">รายการอื่นๆ</option>
