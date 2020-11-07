@@ -9,6 +9,7 @@ use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\SalesReportController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Report\ReportIncomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,5 @@ Route::get('/salesReport', [SalesReportController::class,'index'])->name('salesR
 
 Route::post('/income/record', [IncomeController::class, 'store'])->name('recordIncome');
 Route::post('/expenses/record', [ExpensesController::class, 'store'])->name('recordExpenses');
+
+Route::get('/reportIncome', [ReportIncomeController::class,'index'])->name('reportIncome');

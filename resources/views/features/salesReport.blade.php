@@ -10,7 +10,7 @@
                 <div class="panel-body">
 
                     <!--button link to income page-->
-                    <form>
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('reportIncome') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4">
                                 <button type="submit" class="btn btn-success btn-lg btn-block">บันทึกรายรับ</button>
