@@ -37,6 +37,34 @@
                             <option value="12">ธันวาคม</option>
                             </select>
                         </div>
+
+                        <!-- ตาราง -->
+                        <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Method</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($incomes ?? '' as $row)
+                                <tr>
+                                <th scope="row">{{$row->incomeDate}}</th>
+                                <td>{{$row->incomeName}}</td>
+                                <td>{{$row->incomeMethod}}</td>
+                                <td>{{$row->incomeType}}</td>
+                                <td>{{$row->incomeAmount}}</td>
+                                <td>{{$row->incomeNote}}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                        </table>
+
+
                     </div>
                 </div>
             </div>
