@@ -44,9 +44,9 @@
 
                             <div class="col-md-6">
                                 <select type="select" class="form-control" name="method" id="method">
-                                <option value="cash">เงินสด</option>
-                                <option value="pay-in">โอนเงินเข้าบัญชี</option>
-                                <option value="cheque">เช็ค</option>
+                                <option value="เงินสด">เงินสด</option>
+                                <option value="โอนเงินเข้าบัญชี">โอนเงินเข้าบัญชี</option>
+                                <option value="เช็ค">เช็ค</option>
                                 </select>
                             </div>
                         </div>
@@ -58,10 +58,10 @@
 
                             <div class="col-md-6">
                                 <select type="select" class="form-control" name="type" id="type">
-                                <option value="capital">เงินทุน</option>
-                                <option value="loan">จากการกู้ยืม</option>
-                                <option value="selling">จากการขายสินค้า</option>
-                                <option value="other">รายการอื่นๆ</option>
+                                <option value="เงินทุน">เงินทุน</option>
+                                <option value="จากการกู้ยืม">จากการกู้ยืม</option>
+                                <option value="จากการขายสินค้า">จากการขายสินค้า</option>
+                                <option value="รายการอื่นๆ">รายการอื่นๆ</option>
                             </select>
                             </div>
                         </div>
