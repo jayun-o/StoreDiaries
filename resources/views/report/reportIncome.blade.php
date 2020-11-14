@@ -42,12 +42,12 @@
                         <table class="table table-striped">
                         <thead>
                             <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Method</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Note</th>
+                            <th scope="col">วันที่</th>
+                            <th scope="col">ชื่อรายการ</th>
+                            <th scope="col">วิธีการรับเงิน</th>
+                            <th scope="col">ประเภทรายรับ</th>
+                            <th scope="col">จำนวนเงิน(บาท)</th>
+                            <th scope="col">รายละเอียดเพิ่มเติม</th>
                             <th scope="col">แก้ไข</th>
                             <th scope="col">ลบ</th>
                             </tr>
