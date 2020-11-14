@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Record Expense</div>
+                <div class="panel-heading">บันทึกรายจ่าย</div>
 
                 <div class="panel-body">
                 @if (session('status'))
@@ -43,10 +43,10 @@
 
                             <div class="col-md-6">
                                 <select type="select" class="form-control" name="method" id="method">
-                                <option value="cash">เงินสด</option>
-                                <option value="pay-in">โอนเงินเข้าบัญชี</option>
-                                <option value="cheque">เช็ค</option>
-                                <option value="credit">เครดิต</option>
+                                <option value="เงินสด">เงินสด</option>
+                                <option value="โอนเงินเข้าบัญชี">โอนเงินเข้าบัญชี</option>
+                                <option value="เช็ค">เช็ค</option>
+                                <option value="เครดิต">เครดิต</option>
                             </select>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Record
+                                    บันทึก
                                 </button>
                             </div>
                         </div>

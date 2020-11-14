@@ -74,7 +74,7 @@
                         </table>
                     </div>
                     <a href="/income" class="btn btn-primary">เพิ่มข้อมูล</a>
-                    <a href="/salesReport" class="btn btn-success">กลับ</a>
+                    <a href="/salesReport" class="btn btn-success">กลับเมนูแสดงรายการ</a>
                 </div>
             </div>
         </div>
