@@ -48,6 +48,8 @@
                             <th scope="col">Type</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Note</th>
+                            <th scope="col">แก้ไข</th>
+                            <th scope="col">ลบ</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,13 +61,20 @@
                                 <td>{{$row->incomeType}}</td>
                                 <td>{{$row->incomeAmount}}</td>
                                 <td>{{$row->incomeNote}}</td>
+                                <td>
+                                    <a href="http://" class="btn btn-success">แก้ไข</a>
+                                </td>
+                                <td>
+                                    <a href="http://" class="btn btn-danger">ลบ</a>
+                                </td>
+
                                 </tr>
                             @endforeach
                         </tbody>
                         </table>
-
-
                     </div>
+                    <a href="/income" class="btn btn-primary">เพิ่มข้อมูล</a>
+                    <a href="/salesReport" class="btn btn-success">กลับ</a>
                 </div>
             </div>
         </div>

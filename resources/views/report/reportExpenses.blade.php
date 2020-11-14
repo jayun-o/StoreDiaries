@@ -1,0 +1,83 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+            <div class="panel-heading">บันทึกรายจ่าย</div>
+
+                <div class="panel-body">
+                @if (session('status'))
+                    <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center">
+                        {{ session('status') }}
+                    </div>
+
+
+                @endif
+                    <form class="form-horizontal" role="form" method="post" action="{{ route('reportIncome') }}">
+                        @csrf
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">เดือน : </label>
+                        <div class="col-md-6">
+                            <select type="select" class="form-control" name="method" id="method">
+                            <option value="01">มกราคม</option>
+                            <option value="02">กุมภาพันธ์</option>
+                            <option value="03">มีนาคม</option>
+                            <option value="04">เมษายน</option>
+                            <option value="05">พฤษภาคม</option>
+                            <option value="06">มิถุนายน</option>
+                            <option value="07">กรกฎาคม</option>
+                            <option value="08">สิงหาคม</option>
+                            <option value="09">กันยายน</option>
+                            <option value="10">ตุลาคม</option>
+                            <option value="11">พฤศจิกายน</option>
+                            <option value="12">ธันวาคม</option>
+                            </select>
+                        </div>
+
+                        <!-- ตาราง -->
+                        <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Method</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Note</th>
+                            <th scope="col">แก้ไข</th>
+                            <th scope="col">ลบ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($expenses ?? '' as $row)
+                                <tr>
+                                <th scope="row">{{$row->expensesDate}}</th>
+                                <td>{{$row->expensesName}}</td>
+                                <td>{{$row->expensesMethod}}</td>
+                                <td>{{$row->expensesType}}</td>
+                                <td>{{$row->expensesAmount}}</td>
+                                <td>{{$row->expensesNote}}</td>
+                                <td>
+                                    <a href="http://" class="btn btn-success">แก้ไข</a>
+                                </td>
+                                <td>
+                                    <a href="http://" class="btn btn-danger">ลบ</a>
+                                </td>
+
+                                </tr>
+                            @endforeach
+                        </tbody>
+                        </table>
+                    </div>
+                    <a href="/expenses" class="btn btn-primary">เพิ่มข้อมูล</a>
+                    <a href="/salesReport" class="btn btn-success">กลับ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

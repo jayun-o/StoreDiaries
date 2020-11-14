@@ -10,6 +10,7 @@ use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\SalesReportController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Report\ReportIncomeController;
+use App\Http\Controllers\Report\ReportExpensesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +29,6 @@ Route::get('/home', function () {
 
 
 Route::get('/', [DashboardController::class,'index'])->name('dashboard');
-
-// Route::get('/home', [HomeController::class,'index'])->name('home');
 
 Route::get('/register', [RegisterController::class,'index'])->name('register');
 Route::post('/register', [RegisterController::class,'store']);
@@ -51,3 +50,4 @@ Route::post('/income/record', [IncomeController::class, 'store'])->name('recordI
 Route::post('/expenses/record', [ExpensesController::class, 'store'])->name('recordExpenses');
 
 Route::get('/reportIncome', [ReportIncomeController::class,'index'])->name('reportIncome');
+Route::get('/reportExpenses', [ReportExpensesController::class,'index'])->name('reportExpenses');

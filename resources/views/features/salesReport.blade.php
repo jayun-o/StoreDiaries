@@ -36,15 +36,9 @@
                         </div>
                     
                     </form>
-
                     
-
-                    
-
-                    
-
                     <!--button link to expenses page-->
-                    <form >
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('reportExpenses') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-danger btn-lg btn-block">บันทึกรายจ่าย</button>
