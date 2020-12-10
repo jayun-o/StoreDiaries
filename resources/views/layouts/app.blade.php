@@ -52,10 +52,10 @@
                     
                     @auth
                     
-                    <li><a href="{{ route('home') }}" class="p-3">Home</a></li>
-                    <li><a href="{{ route('income') }}" class="p-3">Income</a></li>
-                    <li><a href="{{ route('expenses') }}" class="p-3">Expenses</a></li>
-                    <li><a href="{{ route('salesReport') }}" class="p-3">Sales report</a></li>
+                    <li><a href="{{ route('home') }}" class="p-3">หน้าแรก</a></li>
+                    <li><a href="{{ route('income') }}" class="p-3">บันทึกรายรับ</a></li>
+                    <li><a href="{{ route('expenses') }}" class="p-3">บันทึกรายจ่าย</a></li>
+                    <li><a href="{{ route('salesReport') }}" class="p-3">รายงานการขาย</a></li>
                     
                     @endauth
                 </ul>
@@ -63,12 +63,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     @auth
                         <li><a href="#" class="p-3">{{auth()->user()->name}}</a></li>
-                        <li><a href="{{ route('logout') }}" class="p-3">Logout</a></li>
+                        <li><a href="{{ route('logout') }}" class="p-3">ออกจากระบบ</a></li>
                     @endauth
 
                     @guest
-                        <li><a href="{{ route('login')}}" class="p-3">Login</a></li>
-                        <li><a href="{{ route('register')}}" class="p-3">Register</a></li>
+                        <li><a href="{{ route('login')}}" class="p-3">เข้าสู่ระบบ</a></li>
+                        <li><a href="{{ route('register')}}" class="p-3">ลงทะเบียน</a></li>
                     @endguest
                 </ul>
                 

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading">ลงทะเบียน</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="post" action="{{ route('register') }}">
@@ -13,7 +13,7 @@
 
                         <!-- store name -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Store Name</label>
+                            <label class="col-md-4 control-label">ชื่อร้านค้า</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="name" value="{{ old('name') }}">
@@ -29,7 +29,7 @@
 
                         <!-- Email -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+                            <label class="col-md-4 control-label">อีเมล</label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -45,7 +45,7 @@
 
                         <!-- Password -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Password</label>
+                            <label class="col-md-4 control-label">รหัสผ่าน</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password">
@@ -61,7 +61,7 @@
 
                         <!-- Confirm Password -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Confirm Password</label>
+                            <label class="col-md-4 control-label">ยืนยันรหัสผ่าน</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password_confirmation">
@@ -79,7 +79,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
+                                    <i class="fa fa-btn fa-user"></i>ลงทะเบียน
                                 </button>
                             </div>
                         </div>

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Menu</div>
+                <div class="panel-heading"></div>
                 <div class="panel-body">
 
                     <!--button link to income page-->
@@ -27,19 +27,19 @@
                     </form>
 
                     <!--button link to stock page-->
-                    <form class="form-horizontal" role="form" method="get" action="">
+                    <!-- <form class="form-horizontal" role="form" method="get" action="">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Stock</button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                     <!--button link to sales report page-->
                     <form class="form-horizontal" role="form" method="get" action="{{ route('salesReport') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-warning btn-lg btn-block">Sales Report</button>
+                                <button type="submit" class="btn btn-warning btn-lg btn-block">รายงานการขาย</button>
                             </div>
                         </div>
                         <br>

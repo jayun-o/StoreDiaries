@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">เข้าสู่ระบบ</div>
 
                 <div class="panel-body">
                 @if (session('status'))
@@ -20,7 +20,7 @@
 
                         <!-- Email -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+                            <label class="col-md-4 control-label">อีเมล</label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -36,7 +36,7 @@
 
                         <!-- Password -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Password</label>
+                            <label class="col-md-4 control-label">รหัสผ่าน</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password">
@@ -65,7 +65,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-sign-in"></i>Login
+                                    <i class="fa fa-btn fa-sign-in"></i>เข้าสู่ระบบ
                                 </button>
                             </div>
                         </div>
