@@ -16,9 +16,9 @@
                             <label class="col-md-4 control-label">ชื่อร้านค้า</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <input type="text" class="form-control" name="storename" value="{{ old('storename') }}">
                                 
-                                @error('name')
+                                @error('storename')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
                                 </div>
