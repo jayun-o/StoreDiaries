@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Income;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Income;
+use DB;
 
 class ReportIncomeController extends Controller
 {
@@ -82,5 +83,19 @@ class ReportIncomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // search
+
+    public function search(Request $request)
+    {
+        $from = $request->input('form');
+        $to = $request->input('to');
+
+        $query = DB::table('incomes')->select()
+                ->where('incomeDate','>=',$from)
+                ->where('incomeDate','<=',$to)
+                ->get();
+        return view('report.reportIncome',compact(['query']));
     }
 }

@@ -52,3 +52,6 @@ Route::post('/expenses/record', [ExpensesController::class, 'store'])->name('rec
 Route::get('/reportIncome', [ReportIncomeController::class,'index'])->name('reportIncome');
 Route::get('/reportExpenses', [ReportExpensesController::class,'index'])->name('reportExpenses');
 
+// ---------------------------------------search-------------------------------------------------------
+Route::post('/reportIncome', [ReportIncomeController::class,'search'])->name('reportIncome');
+Route::post('reportExpenses', [ReportExpensesController::class,'search'])->name('reportExpenses');

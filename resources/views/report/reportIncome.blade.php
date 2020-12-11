@@ -18,27 +18,28 @@
                     <form class="form-horizontal" role="form" method="post" action="{{ route('reportIncome') }}">
                         @csrf
 
-
+                <!-- --------------------------------------------search----------------------------------------------------------->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">เดือน : </label>
-                        <div class="col-md-6">
-                            <select type="select" class="form-control" name="method" id="method">
-                            <option value="01">มกราคม</option>
-                            <option value="02">กุมภาพันธ์</option>
-                            <option value="03">มีนาคม</option>
-                            <option value="04">เมษายน</option>
-                            <option value="05">พฤษภาคม</option>
-                            <option value="06">มิถุนายน</option>
-                            <option value="07">กรกฎาคม</option>
-                            <option value="08">สิงหาคม</option>
-                            <option value="09">กันยายน</option>
-                            <option value="10">ตุลาคม</option>
-                            <option value="11">พฤศจิกายน</option>
-                            <option value="12">ธันวาคม</option>
-                            </select>
-                        </div>
+                        <form action = "search_income" method = "post">
+                            @csrf
+                                <label for="date" class="col-md-4 control-label">วันที่บันทึกรายรับจาก </label>
+                                    <div class="col-sm-3">
+                                        <input type="date" class="form-control input-sm" name="from" id="from" required/>
+                                    </div>
+                                <br><br>
+                                <label for="date" class="col-md-4 control-label">วันที่บันทึกรายรับถึง </label>
+                                    <div class="col-sm-3">
+                                        <input type="date" class="form-control input-sm" name="to" id="to" required/>
+                                    </div>
 
-                        <!-- ตาราง -->
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn" name="search" title="search">
+                                            <i class="fa fa-btn fa-search"></i>search
+                                        </button>
+                                    </div>
+                        </form>
+
+                        <!------------------------------------------- ตาราง ---------------------------------------------------------->
                         <table class="table table-striped">
                         <thead>
                             <tr>
