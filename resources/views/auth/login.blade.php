@@ -39,7 +39,7 @@
                             <label class="col-md-4 control-label">รหัสผ่าน</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" >
                                 
                                 @error('password')
                                 <div class="text-red-500 mt-2 text-sm">
