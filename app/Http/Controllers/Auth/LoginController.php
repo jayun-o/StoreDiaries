@@ -22,7 +22,7 @@ class LoginController extends Controller
         
         if (!auth()->attempt($request->only('email', 'password'),$request->remember))
         {
-            return back()->with('status', 'Invalid login details');
+            return back()->with('status', 'เข้าสู่ระบบไม่สำเร็จ ลองใหม่อีกครั้ง');
         }
 
         return redirect()->intended('/home');
