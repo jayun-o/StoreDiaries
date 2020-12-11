@@ -113,6 +113,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     บันทึก
                                 </button>
+                                <a href="/reportIncome" class="btn btn-warning">ตารางบันทึกรายรับ</a>
                             </div>
                         </div>
                     </form>

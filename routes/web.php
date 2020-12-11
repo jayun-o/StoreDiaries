@@ -5,12 +5,12 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\IncomeController;
-use App\Http\Controllers\ExpensesController;
-use App\Http\Controllers\SalesReportController;
+use App\Http\Controllers\Income\IncomeController;
+use App\Http\Controllers\Expense\ExpensesController;
+use App\Http\Controllers\Report\SalesReportController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Report\ReportIncomeController;
-use App\Http\Controllers\Report\ReportExpensesController;
+use App\Http\Controllers\Income\ReportIncomeController;
+use App\Http\Controllers\Expense\ReportExpensesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +51,4 @@ Route::post('/expenses/record', [ExpensesController::class, 'store'])->name('rec
 
 Route::get('/reportIncome', [ReportIncomeController::class,'index'])->name('reportIncome');
 Route::get('/reportExpenses', [ReportExpensesController::class,'index'])->name('reportExpenses');
+

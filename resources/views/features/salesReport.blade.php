@@ -13,7 +13,7 @@
                     <form class="form-horizontal" role="form" method="get" action="{{ route('reportIncome') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4">
-                                <button type="submit" class="btn btn-success btn-lg btn-block">บันทึกรายรับ</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">ตารางบันทึกรายรับ</button>
                             </div>
                         </div>    
                     
@@ -41,7 +41,7 @@
                     <form class="form-horizontal" role="form" method="get" action="{{ route('reportExpenses') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">บันทึกรายจ่าย</button>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">ตารางบันทึกรายจ่าย</button>
                             </div>
                         </div>
                     </form>
@@ -67,14 +67,14 @@
                    
 
                     <!--button link to stock-->
-                    <form>
+                    <!-- <form>
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-warning btn-lg btn-block">รายงานยอดขาย</button>
                             </div>
                         </div>
                         <br>
-                    </form>
+                    </form> -->
                 </div>
 
             </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Report;
+namespace App\Http\Controllers\Expense;
 use App\Http\Controllers\Controller;
 use App\Models\Expenses;
 use Illuminate\Http\Request;
