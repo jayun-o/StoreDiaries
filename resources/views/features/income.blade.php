@@ -23,8 +23,13 @@
                             <label class="col-md-4 control-label">วัน / เดือน / ปี : </label>
 
                             <div class="col-md-6">
-                                <input type="date" class="form-control" name="date"> 
-                                <!--<input type="text" class="form-control" name="date">   -->
+                                <input type="date" class="form-control" name="date">
+
+                                @error('date')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
 
@@ -33,7 +38,13 @@
                             <label class="col-md-4 control-label">ชื่อรายการ : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name"> 
+                                <input type="text" class="form-control" name="name">
+
+                                @error('name')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
 
@@ -43,11 +54,12 @@
                             <label class="col-md-4 control-label">วิธีการรับเงิน : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="method" id="method">
+                                <select type="select" class="form-control" name="method" id="method" >
                                 <option value="เงินสด">เงินสด</option>
                                 <option value="โอนเงินเข้าบัญชี">โอนเงินเข้าบัญชี</option>
                                 <option value="เช็ค">เช็ค</option>
                                 </select>
+
                             </div>
                         </div>
 
@@ -57,7 +69,7 @@
                             <label class="col-md-4 control-label">ประเภทรายรับ : </label>
 
                             <div class="col-md-6">
-                                <select type="select" class="form-control" name="type" id="type">
+                                <select type="select" class="form-control" name="type" id="type" >
                                 <option value="เงินทุน">เงินทุน</option>
                                 <option value="จากการกู้ยืม">จากการกู้ยืม</option>
                                 <option value="จากการขายสินค้า">จากการขายสินค้า</option>
@@ -80,7 +92,13 @@
                             <label class="col-md-4 control-label">จำนวนเงิน(บาท) : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="amount"> 
+                                <input type="text" class="form-control" name="amount">
+                                
+                                @error('amount')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
 
@@ -89,7 +107,7 @@
                             <label class="col-md-4 control-label">หมายเหตุ : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="note"> 
+                                <input type="text" class="form-control" name="note">
                             </div>
                         </div>
 

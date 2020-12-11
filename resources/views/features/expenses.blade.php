@@ -23,7 +23,12 @@
                             <label class="col-md-4 control-label">วัน / เดือน / ปี : </label>
 
                             <div class="col-md-6">
-                                <input type="date" class="form-control" name="date">   
+                                <input type="date" class="form-control" name="date">
+                                @error('date')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                                @enderror  
                             </div>
                         </div>
 
@@ -32,7 +37,12 @@
                             <label class="col-md-4 control-label">ชื่อรายการ : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name"> 
+                                <input type="text" class="form-control" name="name">
+                                @error('name')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
 
@@ -80,7 +90,12 @@
                             <label class="col-md-4 control-label">จำนวนเงิน(บาท) : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="amount"> 
+                                <input type="text" class="form-control" name="amount">
+                                @error('amount')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                                @enderror 
                             </div>
                         </div>
 
@@ -89,7 +104,7 @@
                             <label class="col-md-4 control-label">หมายเหตุ : </label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="note"> 
+                                <input type="text" class="form-control" name="note">
                             </div>
                         </div>
 
