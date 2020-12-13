@@ -8,7 +8,7 @@ class ExpenseRepository
 {
     public function forUser(User $user)
     {
-        $month = $request->input('month');
+        // $month = $request->input('month');
         return $user->expenses()
                     ->orderBy('created_at','asc')
                     ->whereMonth('ExpensesDate','11')
