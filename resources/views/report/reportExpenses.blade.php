@@ -23,9 +23,15 @@
                 <div class="form-group">
                         <form action = "search" method = "post">
                             @csrf
-                                <label for="month" class="col-md-4 control-label">เดือน : </label>
+                                <label for="month" class="col-md-4 control-label">วันที่จาก : </label>
                                     <div class="col-sm-3">
-                                        <input type="month" class="form-control input-sm" name="month" id="month" required/>
+                                        <input type="date" class="form-control input-sm" name="from" id="from" required/>
+                                    </div>
+
+                                    <br><br>
+                                    <label for="month" class="col-md-4 control-label">วันที่ถึง : </label>
+                                    <div class="col-sm-3">
+                                        <input type="date" class="form-control input-sm" name="to" id="to" required/>
                                     </div>
 
                                     <div class="col-sm-2">

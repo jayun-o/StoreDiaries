@@ -95,4 +95,19 @@ class ReportExpensesController extends Controller
         return redirect()->route('reportExpenses');
     }
 
+        // search
+
+    public function search(Request $request)
+    {
+        $from = $request->input('from');
+        $to = $request->input('to');
+
+        $expenses = DB::table('expenses')->select()
+                    ->where('expensesDate','>=', $from)
+                    ->where('expensesDate', '<=', $to)
+                    ->get();
+        
+        return view('report.reportExpenses',compact(['expenses']));
+    }
+
 }

@@ -98,16 +98,17 @@ class ReportIncomeController extends Controller
 
     // search
 
-    // public function search(Request $request)
-    // {
-    //     $from = $request->input('form');
-    //     $to = $request->input('to');
+    public function search(Request $request)
+    {
+        $from = $request->input('from');
+        $to = $request->input('to');
+
+        $incomes = DB::table('incomes')->select()
+                    // ->whereMonth('incomeDate', date('m',$month)
+                    ->where('incomeDate','>=', $from)
+                    ->where('incomeDate', '<=', $to)
+                    ->get();
         
-    //     $query = DB::table('incomes')->select()
-    //             ->where('incomeDate','>=',$from)
-    //             ->where('incomeDate','<=',$to)
-    //             ->get();
-        
-    //     return redirect('reportIncome', compact('query'));
-    // }
+        return view('report.reportIncome',compact(['incomes']));
+    }
 }

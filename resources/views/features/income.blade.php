@@ -15,7 +15,7 @@
 
 
                 @endif
-                    <form class="form-horizontal" role="form" method="post" action="{{ route('recordIncome') }}">
+                    <form class="form-horizontal" role="form" method="post" action="{{ route('searchIncome') }}">
                         @csrf
 
                         <!-- Date -->
