@@ -39,7 +39,7 @@
                                     </div>
                         </form>
 
-                        <!------------------------------------------- ตาราง ---------------------------------------------------------->
+                <!------------------------------------------- ตาราง -------------------------------------------------------------------->
                         <table class="table table-striped">
                         <thead>
                             <tr>
@@ -49,7 +49,7 @@
                             <th scope="col">ประเภทรายรับ</th>
                             <th scope="col">จำนวนเงิน(บาท)</th>
                             <th scope="col">รายละเอียดเพิ่มเติม</th>
-                            <th scope="col">แก้ไข</th>
+                            <!-- <th scope="col">แก้ไข</th> -->
                             <th scope="col">ลบ</th>
                             </tr>
                         </thead>
@@ -62,16 +62,15 @@
                                 <td>{{$income->incomeType}}</td>
                                 <td>{{$income->incomeAmount}}</td>
                                 <td>{{$income->incomeNote}}</td>
-                                <td>
+                                <!-- <td>
                                     <a href="http://" class="btn btn-success">แก้ไข</a>
-                                </td>
+                                </td> -->
                                 <td>
                                     <!-- <a href="http://" class="btn btn-danger">ลบ</a> -->
                                     <form action="{{ route('destroyincome', $income->id) }}" method = "post">
                                         <button type="submit" class="btn btn-danger"> ลบ </button>
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
-
                                     </form>
                                 </td>
 

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class IncomeController extends Controller
 {
+    public function __construc()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         return view('features.income');

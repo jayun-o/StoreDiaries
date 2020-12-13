@@ -5,18 +5,29 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Income;
 use DB;
+use App\Repositories\IncomeRepository;
 
 class ReportIncomeController extends Controller
 {
+    protected $incomes;
+    public function __construct(IncomeRepository $incomes)
+    {
+        $this->middleware('auth');
+        $this->incomes = $incomes;
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $incomes = Income::all();
-        return view('report.reportIncome',compact(['incomes']));
+        // $this->incomes = $incomes;
+        // $incomes = $this->$incomes->forUser('$request'->User());
+
+        return view('report.reportIncome',[
+            'incomes' => $this->incomes->forUser($request->user()),
+        ]);
     }
 
     /**

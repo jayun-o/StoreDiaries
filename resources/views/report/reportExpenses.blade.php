@@ -50,7 +50,7 @@
                             <th scope="col">ประเภทรายรับ</th>
                             <th scope="col">จำนวนเงิน(บาท)</th>
                             <th scope="col">รายละเอียดเพิ่มเติม</th>
-                            <th scope="col">แก้ไข</th>
+                            <!-- <th scope="col">แก้ไข</th> -->
                             <th scope="col">ลบ</th>
                             </tr>
                         </thead>
@@ -63,9 +63,9 @@
                                 <td>{{$expense->expensesType}}</td>
                                 <td>{{$expense->expensesAmount}}</td>
                                 <td>{{$expense->expensesNote}}</td>
-                                <td>
+                                <!-- <td>
                                     <a href="http://" class="btn btn-success">แก้ไข</a>
-                                </td>
+                                </td> -->
                                 <td>
                                     <!-- <a href="http://" class="btn btn-danger">ลบ</a> -->
                                     <form action="{{ route('destroyexpense', $expense->id) }}" method = "post">

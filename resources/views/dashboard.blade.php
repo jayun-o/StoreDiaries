@@ -8,7 +8,7 @@
                 <div class="panel-heading">Store Diaries</div>
 
                 <div class="panel-body">
-                    First page before login and after logout!
+                    Welcome
                 </div>
             </div>
         </div>

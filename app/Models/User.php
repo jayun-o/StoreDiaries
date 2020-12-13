@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Income;
+use App\Models\Expenses;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
