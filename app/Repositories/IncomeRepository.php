@@ -8,10 +8,10 @@ class IncomeRepository
 {
     public function forUser(User $user)
     {
-        // $month = $request->input('month');
+        $month = $request->input('month');
         return $user->incomes()
                     ->orderBy('incomeDate','asc')
-                    ->whereMonth('incomeDate','11')
+                    ->whereMonth('incomeDate','month')
                     ->get();
     }
 
