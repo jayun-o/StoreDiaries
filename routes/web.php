@@ -55,3 +55,5 @@ Route::get('/reportExpenses', [ReportExpensesController::class,'index'])->name('
 // ---------------------------------------search-------------------------------------------------------
 Route::post('/reportIncome', [ReportIncomeController::class,'search'])->name('reportIncome');
 Route::post('reportExpenses', [ReportExpensesController::class,'search'])->name('reportExpenses');
+
+Route::delete('/income{income}', [ReportIncomeController::class, 'destroy'])->name('destroyincome');

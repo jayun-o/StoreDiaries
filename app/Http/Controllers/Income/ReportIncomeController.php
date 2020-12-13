@@ -80,9 +80,13 @@ class ReportIncomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Income $income)
     {
-        //
+        // $this-> authorize('destroy', $income);
+
+        $income-> delete();
+
+        return redirect()->route('reportIncome');
     }
 
     // search

@@ -54,19 +54,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($incomes ?? '' as $row)
+                            @foreach($incomes as $income)
                                 <tr>
-                                <th scope="row">{{$row->incomeDate}}</th>
-                                <td>{{$row->incomeName}}</td>
-                                <td>{{$row->incomeMethod}}</td>
-                                <td>{{$row->incomeType}}</td>
-                                <td>{{$row->incomeAmount}}</td>
-                                <td>{{$row->incomeNote}}</td>
+                                <th scope="row">{{$income->incomeDate}}</th>
+                                <td>{{$income->incomeName}}</td>
+                                <td>{{$income->incomeMethod}}</td>
+                                <td>{{$income->incomeType}}</td>
+                                <td>{{$income->incomeAmount}}</td>
+                                <td>{{$income->incomeNote}}</td>
                                 <td>
                                     <a href="http://" class="btn btn-success">แก้ไข</a>
                                 </td>
                                 <td>
-                                    <a href="http://" class="btn btn-danger">ลบ</a>
+                                    <!-- <a href="http://" class="btn btn-danger">ลบ</a> -->
+                                    <form action="{{ route('destroyincome', $income->id) }}" method = "post">
+                                        <button type="submit" class="btn btn-danger"> ลบ </button>
+                                        {{ method_field('DELETE') }}
+                                        {{ csrf_field() }}
+
+                                    </form>
                                 </td>
 
                                 </tr>
