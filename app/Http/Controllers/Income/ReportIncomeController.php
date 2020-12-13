@@ -22,9 +22,6 @@ class ReportIncomeController extends Controller
      */
     public function index(Request $request)
     {
-        // $this->incomes = $incomes;
-        // $incomes = $this->$incomes->forUser('$request'->User());
-
         return view('report.reportIncome',[
             'incomes' => $this->incomes->forUser($request->user()),
         ]);
@@ -101,15 +98,16 @@ class ReportIncomeController extends Controller
 
     // search
 
-    public function search(Request $request)
-    {
-        $from = $request->input('form');
-        $to = $request->input('to');
-
-        $query = DB::table('incomes')->select()
-                ->where('incomeDate','>=',$from)
-                ->where('incomeDate','<=',$to)
-                ->get();
-        return view('report.reportIncome',compact(['query']));
-    }
+    // public function search(Request $request)
+    // {
+    //     $from = $request->input('form');
+    //     $to = $request->input('to');
+        
+    //     $query = DB::table('incomes')->select()
+    //             ->where('incomeDate','>=',$from)
+    //             ->where('incomeDate','<=',$to)
+    //             ->get();
+        
+    //     return redirect('reportIncome', compact('query'));
+    // }
 }

@@ -21,16 +21,11 @@
 
                 <!-- --------------------------------------------search----------------------------------------------------------->
                 <div class="form-group">
-                        <form action = "search_income" method = "post">
+                        <form action = "search" method = "post">
                             @csrf
-                                <label for="date" class="col-md-4 control-label">วันที่บันทึกรายจ่ายจาก </label>
+                                <label for="month" class="col-md-4 control-label">เดือน : </label>
                                     <div class="col-sm-3">
-                                        <input type="date" class="form-control input-sm" name="from" id="from" required/>
-                                    </div>
-                                <br><br>
-                                <label for="date" class="col-md-4 control-label">วันที่บันทึกรายจ่ายถึง </label>
-                                    <div class="col-sm-3">
-                                        <input type="date" class="form-control input-sm" name="to" id="to" required/>
+                                        <input type="month" class="form-control input-sm" name="month" id="month" required/>
                                     </div>
 
                                     <div class="col-sm-2">
@@ -39,6 +34,7 @@
                                         </button>
                                     </div>
                         </form>
+
 
                         <!-- ตาราง -->
                         <table class="table table-striped">
