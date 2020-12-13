@@ -129,7 +129,7 @@
                                     บันทึก
                                 </button>
 
-                                <a href="/reportExpense" class="btn btn-warning">ตารางบันทึกรายจ่าย</a>
+                                <a href="/reportExpenses" class="btn btn-warning">ตารางบันทึกรายจ่าย</a>
                             </div>
                         </div>
                     </form>

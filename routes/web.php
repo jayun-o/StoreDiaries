@@ -57,3 +57,4 @@ Route::post('/reportIncome', [ReportIncomeController::class,'search'])->name('re
 Route::post('reportExpenses', [ReportExpensesController::class,'search'])->name('reportExpenses');
 
 Route::delete('/income{income}', [ReportIncomeController::class, 'destroy'])->name('destroyincome');
+Route::delete('/expense{expense}', [ReportExpensesController::class, 'destroy'])->name('destroyexpense');

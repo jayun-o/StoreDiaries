@@ -82,8 +82,6 @@ class ReportIncomeController extends Controller
      */
     public function destroy(Income $income)
     {
-        // $this-> authorize('destroy', $income);
-
         $income-> delete();
 
         return redirect()->route('reportIncome');

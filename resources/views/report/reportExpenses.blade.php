@@ -55,19 +55,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($expenses ?? '' as $row)
+                            @foreach($expenses as $expense)
                                 <tr>
-                                <th scope="row">{{$row->expensesDate}}</th>
-                                <td>{{$row->expensesName}}</td>
-                                <td>{{$row->expensesMethod}}</td>
-                                <td>{{$row->expensesType}}</td>
-                                <td>{{$row->expensesAmount}}</td>
-                                <td>{{$row->expensesNote}}</td>
+                                <th scope="row">{{$expense->expensesDate}}</th>
+                                <td>{{$expense->expensesName}}</td>
+                                <td>{{$expense->expensesMethod}}</td>
+                                <td>{{$expense->expensesType}}</td>
+                                <td>{{$expense->expensesAmount}}</td>
+                                <td>{{$expense->expensesNote}}</td>
                                 <td>
                                     <a href="http://" class="btn btn-success">แก้ไข</a>
                                 </td>
                                 <td>
-                                    <a href="http://" class="btn btn-danger">ลบ</a>
+                                    <!-- <a href="http://" class="btn btn-danger">ลบ</a> -->
+                                    <form action="{{ route('destroyexpense', $expense->id) }}" method = "post">
+                                        <button type="submit" class="btn btn-danger"> ลบ </button>
+                                        {{ method_field('DELETE') }}
+                                        {{ csrf_field() }}
+
+                                    </form>
                                 </td>
 
                                 </tr>
