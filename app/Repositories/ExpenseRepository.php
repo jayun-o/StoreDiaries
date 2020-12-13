@@ -11,7 +11,7 @@ class ExpenseRepository
         $month = $request->input('month');
         return $user->expenses()
                     ->orderBy('created_at','asc')
-                    ->whereMonth('ExpensesDate','month')
+                    ->whereMonth('ExpensesDate',$month)
                     ->get();
     }
 }

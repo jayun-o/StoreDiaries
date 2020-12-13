@@ -11,7 +11,7 @@ class IncomeRepository
         $month = $request->input('month');
         return $user->incomes()
                     ->orderBy('incomeDate','asc')
-                    ->whereMonth('incomeDate','month')
+                    ->whereMonth('incomeDate',$month)
                     ->get();
     }
 
