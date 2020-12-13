@@ -4,18 +4,27 @@ namespace App\Http\Controllers\Expense;
 use App\Http\Controllers\Controller;
 use App\Models\Expenses;
 use Illuminate\Http\Request;
+use App\Repositories\ExpenseRepository;
 
 class ReportExpensesController extends Controller
 {
+    protected $expenses;
+    
+    public function __construct(ExpenseRepository $expenses)
+    {
+        $this->middleware('auth');
+        $this->expenses = $expenses;
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $expenses = Expenses::all();
-        return view('report.reportExpenses',compact(['expenses']));
+        return view('report.reportExpenses',[
+            'expenses' => $this->expenses->forUser($request->user()),
+        ]);
     }
 
     /**
