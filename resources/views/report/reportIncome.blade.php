@@ -35,7 +35,7 @@
 
                                     <div class="col-sm-2">
                                         <button type="submit" class="btn" name="search" title="search">
-                                            <i class="fa fa-btn fa-search"></i>search
+                                            <i class="fa fa-btn fa-search"></i>ค้นหา
                                         </button>
                                     </div>
                         </form>

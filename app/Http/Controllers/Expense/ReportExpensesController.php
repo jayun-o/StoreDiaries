@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Expenses;
 use Illuminate\Http\Request;
 use App\Repositories\ExpenseRepository;
+use DB;
 
 class ReportExpensesController extends Controller
 {
@@ -95,8 +96,7 @@ class ReportExpensesController extends Controller
         return redirect()->route('reportExpenses');
     }
 
-        // search
-
+    // search
     public function search(Request $request)
     {
         $from = $request->input('from');
