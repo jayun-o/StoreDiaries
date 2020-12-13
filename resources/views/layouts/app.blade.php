@@ -62,7 +62,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     @auth
-                        <li><a href="#" class="p-3">{{auth()->user()->name}}</a></li>
+                        <li><a href="#" class="p-3">{{auth()->user()->storename}}</a></li>
                         <li><a href="{{ route('logout') }}" class="p-3">ออกจากระบบ</a></li>
                     @endauth
 

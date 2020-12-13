@@ -29,10 +29,11 @@ Route::get('/home', function () {
 
 
 Route::get('/', [DashboardController::class,'index'])->name('dashboard');
-
+// ---------------------------------------register-------------------------------------------------------
 Route::get('/register', [RegisterController::class,'index'])->name('register');
 Route::post('/register', [RegisterController::class,'store']);
 
+// ---------------------------------------login-------------------------------------------------------
 Route::get('/login', [LoginController::class,'index'])->name('login');
 Route::post('/login', [LoginController::class,'store']);
 
@@ -56,5 +57,6 @@ Route::get('/reportExpenses', [ReportExpensesController::class,'index'])->name('
 Route::post('/reportIncome', [ReportIncomeController::class,'search'])->name('reportIncome');
 Route::post('reportExpenses', [ReportExpensesController::class,'search'])->name('reportExpenses');
 
+// ---------------------------------------delete-------------------------------------------------------
 Route::delete('/income{income}', [ReportIncomeController::class, 'destroy'])->name('destroyincome');
 Route::delete('/expense{expense}', [ReportExpensesController::class, 'destroy'])->name('destroyexpense');
