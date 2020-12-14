@@ -55,6 +55,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @if ($incomes->count())
                             @foreach($incomes as $income)
                                 <tr>
                                 <th scope="row">{{$income->incomeDate}}</th>
@@ -78,6 +79,9 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        @else
+                        <p style="color:#FF0000";>ไม่มีบันทึกรายรับ</p>
+                        @endif
                         </table>
                     </div>
                     <a href="/income" class="btn btn-primary">เพิ่มข้อมูล</a>

@@ -57,6 +57,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @if ($expenses->count())
                             @foreach($expenses as $expense)
                                 <tr>
                                 <th scope="row">{{$expense->expensesDate}}</th>
@@ -81,6 +82,9 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        @else
+                        <p style="color:#FF0000";>ไม่มีบันทึกรายจ่าย</p>
+                        @endif
                         </table>
                     </div>
                     <a href="/expenses" class="btn btn-primary">เพิ่มข้อมูล</a>
