@@ -11,6 +11,7 @@ use App\Http\Controllers\Report\SalesReportController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Income\ReportIncomeController;
 use App\Http\Controllers\Expense\ReportExpensesController;
+use App\Http\Controllers\Report\barChartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,6 @@ Route::post('reportExpenses', [ReportExpensesController::class,'search'])->name(
 // ---------------------------------------delete-------------------------------------------------------
 Route::delete('/income{income}', [ReportIncomeController::class, 'destroy'])->name('destroyincome');
 Route::delete('/expense{expense}', [ReportExpensesController::class, 'destroy'])->name('destroyexpense');
+
+// ---------------------------------------BarChart-------------------------------------------------------
+Route::get('barchart', [SalesReportController::class,'barchart'])->name('barchart');

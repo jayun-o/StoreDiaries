@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Report;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Income;
+use App\Models\Expenses;
 
 class SalesReportController extends Controller
 {
@@ -10,4 +12,12 @@ class SalesReportController extends Controller
     {
         return view('features.salesReport');
     }
+
+
+    public function barchart(Request $request)
+    {
+    	
+    	return view('report.barchart');
+    }
+    
 }
