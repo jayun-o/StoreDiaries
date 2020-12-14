@@ -21,21 +21,14 @@
 
                     <form>
                         <div class="form-group">
-                            <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-success btn-lg btn-block">Monthly Income Report</button>
+                            <div class="col-md-4 col-md-offset-4"> 
+                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมรายรับ</button>
                             </div>
                         </div>
                     
                     </form>
 
-                    <form >
-                        <div class="form-group">
-                            <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-success btn-lg btn-block">Yearly Income Report</button>
-                            </div>
-                        </div>
-                    
-                    </form>
+
                     
                     <!--button link to expenses page-->
                     <form class="form-horizontal" role="form" method="get" action="{{ route('reportExpenses') }}">
@@ -48,8 +41,8 @@
 
                     <form >
                         <div class="form-group">
-                            <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">Monthly Expense Report</button>
+                            <div class="col-md-4 col-md-offset-4"> 
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมรายจ่าย</button>
                             </div>
                         </div>
                     </form>
@@ -58,7 +51,7 @@
                     <form >
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">Yearly Expense Report</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">กราฟแท่ง</button>
                             </div>
                         </div>
                     </form>
