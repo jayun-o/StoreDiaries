@@ -48,7 +48,7 @@
                     </form>
 
                     
-                    <form >
+                    <form class="form-horizontal" role="form" method="get" action="{{route('barchart')}}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> <br>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">กราฟแท่ง</button>
