@@ -111,4 +111,51 @@ class ReportIncomeController extends Controller
         
         return view('report.reportIncome',compact(['incomes']));
     }
+
+    public function incomeTypePieChart(Request $request)
+    {
+        $from = $request->input('from');
+        $to = $request->input('to');
+
+        $data = DB::table('incomes')
+            ->select(
+            DB::raw('incomeType as incomeType'),
+            DB::raw('count(*) as number'))
+            ->whereBetween('incomeDate', [$from, $to])
+            //->where('incomeDate','>=', $from)
+            //->where('incomeDate', '<=', $to)
+            ->groupBy('incomeType')
+            ->get();
+        $array[] = ['IncomeType', 'Number'];
+
+        foreach($data as $key => $value)
+        {
+            $array[++$key] = [$value->incomeType, $value->number];
+        }
+
+        return view('report.incomeType')->with('incomeType', json_encode($array));
+    }
+
+    public function incomeMethodPieChart(Request $request)
+    {
+        $from = $request->input('from');
+        $to = $request->input('to');
+
+        $data = DB::table('incomes')
+            ->select(
+            DB::raw('incomeMethod as incomeMethod'),
+            DB::raw('count(*) as number'))
+            ->whereBetween('incomeDate', [$from, $to])
+            //->where('incomeDate', '<=', $to)
+            ->groupBy('incomeMethod')
+            ->get();
+        $array[] = ['IncomeMethod', 'Number'];
+
+        foreach($data as $key => $value)
+        {
+            $array[++$key] = [$value->incomeMethod, $value->number];
+        }
+
+        return view('report.incomeMethod')->with('incomeMethod', json_encode($array));
+    }
 }

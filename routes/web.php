@@ -64,3 +64,7 @@ Route::delete('/expense{expense}', [ReportExpensesController::class, 'destroy'])
 
 // ---------------------------------------BarChart-------------------------------------------------------
 Route::get('barchart', [SalesReportController::class,'barchart'])->name('barchart');
+
+// ---------------------------------------Pie Chart-------------------------------------------------------
+Route::get('/incomeTypePieChart', [ReportIncomeController::class,'incomeTypePieChart'])->name('incomeTypePieChart');
+Route::get('/incomeMethodPieChart', [ReportIncomeController::class,'incomeMethodPieChart'])->name('incomeMethodPieChart');

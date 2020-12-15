@@ -19,10 +19,19 @@
                     
                     </form>
 
-                    <form>
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('incomeTypePieChart') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> 
-                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมรายรับ</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนประเภทรายรับ</button>
+                            </div>
+                        </div>
+                    
+                    </form>
+
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('incomeMethodPieChart') }}">
+                        <div class="form-group">
+                            <div class="col-md-4 col-md-offset-4"> 
+                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนวิธีการรับเงิน</button>
                             </div>
                         </div>
                     
