@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Sales Report</div> 
+                <div class="panel-heading"></div> 
 
                 <div class="panel-body">
 
@@ -22,7 +22,7 @@
                     <form class="form-horizontal" role="form" method="get" action="{{ route('incomeTypePieChart') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> 
-                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนประเภทรายรับ</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมแสดงประเภทรายรับ</button>
                             </div>
                         </div>
                     
@@ -31,7 +31,7 @@
                     <form class="form-horizontal" role="form" method="get" action="{{ route('incomeMethodPieChart') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> 
-                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนวิธีการรับเงิน</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">กราฟวงกลมแสดงวิธีการรับเงิน</button>
                             </div>
                         </div>
                     
@@ -51,7 +51,7 @@
                     <form class="form-horizontal" role="form" method="get" action="{{ route('expensesTypePieChart') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> 
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนประเภทรายจ่าย</button>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมแสดงประเภทรายจ่าย</button>
                             </div>
                         </div>
                     
@@ -60,7 +60,7 @@
                     <form class="form-horizontal" role="form" method="get" action="{{ route('expensesMethodPieChart') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> 
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนวิธีการจ่ายเงิน</button>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมแสดงวิธีการจ่ายเงิน</button>
                             </div>
                         </div>
                     
