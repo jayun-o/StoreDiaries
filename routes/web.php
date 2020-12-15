@@ -68,3 +68,6 @@ Route::get('barchart', [SalesReportController::class,'barchart'])->name('barchar
 // ---------------------------------------Pie Chart-------------------------------------------------------
 Route::get('/incomeTypePieChart', [ReportIncomeController::class,'incomeTypePieChart'])->name('incomeTypePieChart');
 Route::get('/incomeMethodPieChart', [ReportIncomeController::class,'incomeMethodPieChart'])->name('incomeMethodPieChart');
+
+Route::get('/expensesTypePieChart', [ReportExpensesController::class,'expensesTypePieChart'])->name('expensesTypePieChart');
+Route::get('/expensesMethodPieChart', [ReportExpensesController::class,'expensesMethodPieChart'])->name('expensesMethodPieChart');

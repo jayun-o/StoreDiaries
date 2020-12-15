@@ -48,21 +48,22 @@
                         </div>
                     </form>
 
-                    <form >
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('expensesTypePieChart') }}">
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4"> 
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมรายจ่าย</button>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนประเภทรายจ่าย</button>
                             </div>
                         </div>
+                    
                     </form>
 
-                    
-                    <form class="form-horizontal" role="form" method="get" action="{{route('barchart')}}">
+                    <form class="form-horizontal" role="form" method="get" action="{{ route('expensesMethodPieChart') }}">
                         <div class="form-group">
-                            <div class="col-md-4 col-md-offset-4"> <br>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">กราฟแท่ง</button>
+                            <div class="col-md-4 col-md-offset-4"> 
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">กราฟวงกลมแสดงสัดส่วนวิธีการจ่ายเงิน</button>
                             </div>
                         </div>
+                    
                     </form>
 
 

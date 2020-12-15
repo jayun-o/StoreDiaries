@@ -110,4 +110,51 @@ class ReportExpensesController extends Controller
         return view('report.reportExpenses',compact(['expenses']));
     }
 
+    public function expensesTypePieChart(Request $request)
+    {
+        $from = $request->input('from');
+        $to = $request->input('to');
+
+        $data = DB::table('expenses')
+            ->select(
+            DB::raw('expensesType as expensesType'),
+            DB::raw('count(*) as number'))
+            ->whereBetween('expensesDate', [$from, $to])
+            //->where('incomeDate','>=', $from)
+            //->where('incomeDate', '<=', $to)
+            ->groupBy('expensesType')
+            ->get();
+        $array[] = ['ExpensesType', 'Number'];
+
+        foreach($data as $key => $value)
+        {
+            $array[++$key] = [$value->expensesType, $value->number];
+        }
+
+        return view('report.expensesType')->with('expensesType', json_encode($array));
+    }
+
+    public function expensesMethodPieChart(Request $request)
+    {
+        $from = $request->input('from');
+        $to = $request->input('to');
+
+        $data = DB::table('expenses')
+            ->select(
+            DB::raw('expensesMethod as expensesMethod'),
+            DB::raw('count(*) as number'))
+            ->whereBetween('expensesDate', [$from, $to])
+            //->where('incomeDate', '<=', $to)
+            ->groupBy('expensesMethod')
+            ->get();
+        $array[] = ['ExpensesMethod', 'Number'];
+
+        foreach($data as $key => $value)
+        {
+            $array[++$key] = [$value->expensesMethod, $value->number];
+        }
+
+        return view('report.expensesMethod')->with('expensesMethod', json_encode($array));
+    }
+
 }
