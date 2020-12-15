@@ -55,7 +55,7 @@
                     <li><a href="{{ route('home') }}" class="p-3">หน้าแรก</a></li>
                     <li><a href="{{ route('income') }}" class="p-3">บันทึกรายรับ</a></li>
                     <li><a href="{{ route('expenses') }}" class="p-3">บันทึกรายจ่าย</a></li>
-                    <li><a href="{{ route('salesReport') }}" class="p-3">รายงานการขาย</a></li>
+                    <li><a href="{{ route('salesReport') }}" class="p-3">ผลบันทึก</a></li>
                     
                     @endauth
                 </ul>
